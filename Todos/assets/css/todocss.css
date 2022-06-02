@@ -1,0 +1,42 @@
+body {
+  background-image: url('../images/todo1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+#heading {
+  font-size: 90px;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  margin-bottom: 10%;
+  text-decoration: underline;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 20%;
+  margin: 10% 0px 0px 33%;
+}
+.input-group-prepend button{
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 0px 40px;
+  border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;;
+}
+.display_section {
+  background-color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 0px 40px;
+  width: 40%;
+  margin-left: 30%;
+  text-align: center;
+  margin-top: 5%;
+  border: 2px solid black;
+  border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;;
+}
+#
