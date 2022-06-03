@@ -45,22 +45,22 @@ body {
   width: 50%;
   display: inline-block;
 }
-#display {
+#task-data li {
+  /*list-style-type: circle;*/
   font-size: 25px;
   font-weight: bold;
   text-align: left;
   color: #1b6096;
   display: inline-block;
-  margin-right: 80px;
 }
-#dis-date {
+/*#dis-date {
   margin-left: 100px;
   font-size: 15px;
   font-weight: bold;
   text-align: right;
   color: darkgray;
   display: inline-block;
-}
+}*/
 .btn-warning {
   color: white;
 }

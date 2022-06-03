@@ -23,7 +23,7 @@
               <input type="text" class="form-control form-control-lg" id="todo" placeholder="Add a todo....." >
             </div>
             <div class="input-group-prepend input-group-prepend-lg">
-              <button type="button" class="btn btn-success" id="btn" onclick="todo();"> + </button>
+              <button type="button" class="btn btn-success" id="btn" onclick="addTodo()"> + </button>
             </div>
           </div>
         </div>
@@ -35,20 +35,21 @@
       <div class="row justify-content-center">
         <div class="col-3-lg">
           <h1>Your To-Do Data</h1>
-          <div class="col-auto">
-            <ul style="list-style-type:circle;" class="list-group" id="task-data">
-              <li>
-                <p id="display"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto">
+          <ul style="list-style-type:circle;" class="list-group" id="task-data">
+                <!-- <p id="display"></p>
                 <span id="dis-date"></span>
                 <button class="btn btn-info" onclick="editTask();" aria-label="Edit">
                   <i class="fas fa-edit" aria-hidden="true"></i>
                 </button>
                 <button class="btn btn-danger" onclick="deleteTask();" aria-label="Delete">
                   <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
+                </button> -->
+
+          </ul>
         </div>
       </div>
     </div>
