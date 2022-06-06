@@ -47,11 +47,16 @@ body {
 }
 #task-data li {
   /*list-style-type: circle;*/
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
-  text-align: left;
-  color: #1b6096;
+  text-align: right;
+  color: darkgray;
   display: inline-block;
+  padding: 10px;
+  background-color: #f0f1f1;
+  border-radius: 0.5rem;
+  border: 1px solid #1c88ab;
+  margin: 5px;
 }
 /*#dis-date {
   margin-left: 100px;
@@ -61,6 +66,17 @@ body {
   color: darkgray;
   display: inline-block;
 }*/
+/*#edit {
+  margin-left: 5%;
+}*/
 .btn-warning {
   color: white;
+}
+#span1 {
+  margin-right: 30%;
+  color: #1b6096;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  float: left;
 }
