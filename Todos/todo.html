@@ -23,7 +23,16 @@
               <input type="text" class="form-control form-control-lg" id="todo" placeholder="Add a todo....." >
             </div>
             <div class="input-group-prepend input-group-prepend-lg">
-              <button type="button" class="btn btn-success" id="btn" onclick="addTodo()"> + </button>
+              <button type="button" class="btn btn-success" id="btn" onclick="addTodo();"> + </button>
+            </div>
+            <div class="input-group-prepend input-group-prepend-lg">
+              <din class = "dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button"id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="dropdown-item" onclick="asce();">Ascending to Desending</li>
+                  <li class="dropdown-item" onclick="desc();">Desending to Ascending</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-let addButton, listItem, todoArray = [], liData;
+let addButton, listItem, todoArray = [], liData, li;
 
 function addTodo() {
   const today = new Date();
@@ -13,10 +13,11 @@ function addTodo() {
   localStorage.setItem("todos", JSON.stringify(todoArray));
   displayData(todoObj);
   reset();
+  // sorting(todoObj);
 }
 
 function displayData({id, text, date}) {
-  const li = `<li id="${ id }">
+  li = `<li id="${ id }">
     <span id="span1">${text}</span>
     ${date}
     <button class="btn btn-info" id="edit" onclick="editTask('${id}', '${text}' ,'${date}');" aria-label="Edit">
@@ -55,7 +56,26 @@ function editTask(id, text, date) {
     });
   }
 }
+function asce() {
+  debugger
+    todoArray.sort((a, b) => a.id - b.id);
+    //console.log(sorted)
+    console.log(todoArray)
+  }
+function desc() {
 
+  todoArray.sort((a, b) => b.id - a.id);
+  //console.log(sorted)
+  console.log(todoArray)
+  localStorage.setItem("todos", JSON.stringify(todoArray));
+  todoArray.map(function(ele) {
+    debugger
+    let arrangeData = document.getElementById('task-data').querySelector('li').innerText;
+    console.log(arrangeData)
+    document.querySelector('li').innerText = arrangeData;
+  })
+
+}
 
 
 
