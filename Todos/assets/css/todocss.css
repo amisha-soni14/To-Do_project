@@ -10,7 +10,6 @@ body {
   font-weight: bolder;
   text-align: center;
   color: white;
-  margin-bottom: 10%;
   text-decoration: underline;
 }
 .input-group {
@@ -19,7 +18,7 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   width: 20%;
-  margin: 10% 0px 0px 33%;
+  margin-top: 10%;
 }
 .input-group-prepend button{
   font-size: 30px;
@@ -27,26 +26,14 @@ body {
   padding: 0px 40px;
   border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;;
 }
-.display_section {
-  background-color: white;
-  font-size: 30px;
-  font-weight: bolder;
-  padding: 0px 40px;
-  width: 40%;
-  display: inline-block;
-  margin-left: 30%;
-  text-align: center;
-  margin-top: 5%;
-  border: 2px solid black;
-  border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;;
-}
+
 .col-auto {
   flex: 0 0 auto;
   width: 50%;
   display: inline-block;
 }
+
 #task-data li {
-  /*list-style-type: circle;*/
   font-size: 15px;
   font-weight: bold;
   text-align: right;
@@ -58,17 +45,6 @@ body {
   border: 1px solid #1c88ab;
   margin: 5px;
 }
-/*#dis-date {
-  margin-left: 100px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: right;
-  color: darkgray;
-  display: inline-block;
-}*/
-/*#edit {
-  margin-left: 5%;
-}*/
 .btn-warning {
   color: white;
 }
@@ -99,3 +75,14 @@ body {
   background-color: transparent;
   border: 0;
 }
+.todo-list {
+  background-color: white;
+  margin-top: 10%;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 0px 40px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
