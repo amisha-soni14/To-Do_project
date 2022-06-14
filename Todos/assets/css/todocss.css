@@ -33,25 +33,17 @@ body {
   display: inline-block;
 }
 
-#task-data li {
-  font-size: 15px;
-  font-weight: bold;
-  text-align: right;
-  color: darkgray;
-  display: inline-block;
-  padding: 10px;
-  background-color: #f0f1f1;
-  border-radius: 0.5rem;
-  border: 1px solid #1c88ab;
-  margin: 5px;
+li {
+  list-style-type: none;
 }
+
 .btn-warning {
   color: white;
 }
 .btn-success {
-    color: #fff;
-    background-color: #198754;
-    border-color: #198754;
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
 }
 #span1 {
   margin-right: 30%;
@@ -75,14 +67,28 @@ body {
   background-color: transparent;
   border: 0;
 }
-.todo-list {
+.todos {
   background-color: white;
   margin-top: 10%;
   font-size: 25px;
   font-weight: bolder;
-  padding: 0px 40px;
   border: 2px solid black;
   text-align: center;
   border-radius: 0.5rem;
 }
+.todo-list {
+  font-weight: bold;
+  background-color: #f0f1f1;
+  margin: 15px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: darkgray;
+  padding: 10px 20px;
+  border: 2px solid var(--bs-body-color);
+  text-align: right;
+  border-radius: 0.5rem;
+}
 
+#edit {
+  margin : 0px 8px;
+}

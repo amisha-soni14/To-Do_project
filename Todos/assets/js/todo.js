@@ -32,9 +32,6 @@ function displayData({id, text, date}) {
       <i class="fas fa-trash-alt" aria-hidden="true" ></i>
     </button>
   </li>`;
-  // <button class="btn btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#comfirmBox" onclick="deleteTask('${id}')"  >
-  //     <i class="fas fa-trash-alt" aria-hidden="true"></i>
-  //   </button>
   document.getElementById('task-data').insertAdjacentHTML('beforeend', li);
 }
 
