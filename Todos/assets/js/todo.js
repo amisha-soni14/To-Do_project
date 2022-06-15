@@ -72,14 +72,15 @@ function desc() {
 
 function deleteTask(id) {
   let confirm = new bootstrap.Modal(document.getElementById('comfirmBox'), {});
+  idValue = id;
   confirm.show();
-  const confirmValue = document.getElementById('yes').value;
-  console.log(confirmValue)
-  if (confirmValue == "yes") {
-    deleteData = todoArray.filter((e) => (e.id !== +id));
-    document.getElementById(`${id}`).remove();
-    localStorage.setItem("todos", JSON.stringify(deleteData));
-  }
-  confirm.close();
+}
+
+function deleteElement()  {
+  deleteData = todoArray.filter((e) => (e.id !== +idValue));
+  document.getElementById(`${idValue}`).remove();
+  $('.modal-backdrop').remove();
+  localStorage.setItem("todos", JSON.stringify(deleteData));
+
 }
 

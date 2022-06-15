@@ -1,6 +1,11 @@
-let addButton, listItem, todoArray = [], liData, li;
+let addButton, listItem, todoArray = [], liData, li, idValue;
 $(document).ready(function() {
 
+});
+$(document).on('keypress',function(e) {
+  if(e.which == 13) {
+    addTodo();
+  }
 });
 function addTodo() {
   const inputValue = $("#todo").val();
@@ -24,9 +29,8 @@ function addTodo() {
 }
 
 function displayData({id, text, date}) {
-  // debugger
   li = `<li id="${ id }" class = "todo-list">
-    <span id="span1">${text}</span>${date}
+    <span class="span1">${text}</span>${date}
 
     <button class="btn btn-info" id="edit" onclick="editTask('${id}', '${text}' ,'${date}');" aria-label="Edit">
       <i class="fas fa-edit" aria-hidden="true"></i>
@@ -46,7 +50,6 @@ function reset() {
 function editTask(id, text, date) {
   const edit = prompt("Edit Your Text !!", `${text}`);
   if(edit) {
-    debugger
     $.map(todoArray,function(todo) {
       if(todo.id === +id) {
         todo.text = edit;
@@ -56,11 +59,31 @@ function editTask(id, text, date) {
     localStorage.setItem("todos", JSON.stringify(todoArray));
     $.map(todoArray,function(e){
       if(e.id === +id) {
-        let updateData = $('#span1').append(edit);
-        console.log(updateData)
-        // updateData = edit;
-        $('updateData').appendTo('span');
+        debugger
+        $(`#${id} .span1`).text(edit);
       }
     });
   }
+}
+
+function asce() {
+  const stores_li = $('.todo-list');
+  Array.from(stores_li).sort((a, b) => a.id - b.id ).forEach(el => el.parentNode.appendChild(el));
+}
+
+function desc() {
+  const stores_li = $('.todo-list');
+  Array.from(stores_li).sort((a, b) => b.id - a.id ).forEach(el => el.parentNode.appendChild(el));
+}
+function deleteTask(id) {
+  let confirm = new bootstrap.Modal(document.getElementById('comfirmBox'), {});
+  idValue = id;
+  confirm.show();
+}
+
+function deleteElement() {
+  deleteData = todoArray.filter((e) => (e.id !== +idValue));
+  $(`#${idValue}`).remove();
+  $('.modal-backdrop').remove();
+  localStorage.setItem("todos", JSON.stringify(deleteData));
 }
