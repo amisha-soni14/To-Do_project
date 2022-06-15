@@ -13,6 +13,7 @@
   <title>Index page</title>
 </head>
 <body>
+  <!-- Input field ,add button , sort button -->
   <div class="main_section">
     <div class="container">
       <p id="heading">TODOS  <img src="assets/images/icon.png" style="height: 80px; widows: 100px;"></p>
@@ -23,14 +24,14 @@
               <input type="text" class="form-control form-control-lg" id="todo" placeholder="Add a todo....." >
             </div>
             <div class="input-group-prepend input-group-prepend-lg">
-              <button type="button" class="btn btn-success" id="btn" onclick="addTodo();"> + </button>
+              <button type="button" class="btn btn-success" id="btn"  > + </button>
             </div>
             <div class="input-group-prepend input-group-prepend-lg">
               <div class = "dropdown">
                 <button class="btn btn-success dropdown-toggle" type="button"id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li class="dropdown-item" onclick="asce();">Ascending</li>
-                  <li class="dropdown-item" onclick="desc();">Desending</li>
+                  <li class="dropdown-item" id="asce">Ascending</li>
+                  <li class="dropdown-item" id="desc">Desending</li>
                 </ul>
               </div>
             </div>
@@ -39,6 +40,7 @@
       </div>
     </div>
   </div>
+  <!-- Todo list section -->
   <div class="display_section">
     <div class="container">
       <div class="row justify-content-center">
@@ -49,11 +51,11 @@
           </div>
         </div>
         <!-- Bootstrap Modal -->
-        <div class="modal fade" id="comfirmBox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="comfirmBoxLabel" aria-hidden="true">
+        <div class="modal fade" id="confirmBox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmBoxLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="comfirmBoxLabel">Confirmation</h5>
+                <h5 class="modal-title" id="confirmBoxLabel">Confirmation</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -61,7 +63,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLose</button>
-                <button type="button" class="btn btn-primary" onclick="deleteElement()" data-bs-dismiss="modal">Confirm</button>
+                <button type="button" class="btn btn-primary" id="deleteElement" data-bs-dismiss="modal">Confirm</button>
               </div>
             </div>
           </div>
