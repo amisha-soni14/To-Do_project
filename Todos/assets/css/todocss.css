@@ -69,7 +69,7 @@ li {
 }
 .todos {
   background-color: white;
-  margin-top: 10%;
+  margin-top: 10px;
   font-size: 25px;
   font-weight: bolder;
   border: 2px solid black;
@@ -91,4 +91,10 @@ li {
 
 #edit {
   margin : 0px 8px;
+}
+.btn-primary {
+  margin: 15px 28%;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }

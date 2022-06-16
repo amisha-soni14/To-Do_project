@@ -1,0 +1,6 @@
+storedArray = [
+	{id: 1655375079121, text: '8:00 am Complete Jquery', date: '16 - Jun - 2022'}
+	{id: 1655375091682, text: '2:00 pm lunch', date: '16 - Jun - 2022'}
+	{id: 1655375115363, text: '2:30 pm Start Ajax', date: '16 - Jun - 2022'}
+	{id: 1655375151014, text: '6:00 pm Awk', date: '16 - Jun - 2022'}
+	]

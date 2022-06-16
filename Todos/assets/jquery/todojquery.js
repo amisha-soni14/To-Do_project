@@ -1,5 +1,13 @@
 let addButton, listItem, todoArray = [], liData, li, idValue;
 $(document).ready(function() {
+  $('#todo').keypress(function(e) {
+    var key = e.which;
+    if (key == 13) // the enter key code
+    {
+      $('#btn').click();
+      return false;
+    }
+  });
   $('#btn').click(function() {
     const inputValue = $("#todo").val();
     if(inputValue == "") {
@@ -24,10 +32,10 @@ $(document).ready(function() {
     li = `<li id="${ id }" class = "todo-list">
       <span class="span1">${text}</span>${date}
 
-      <button class="btn btn-info" id="edit" aria-label="Edit">
+      <button class="btn btn-info" id="editTodo" value="${ id }" aria-label="Edit">
         <i class="fas fa-edit" aria-hidden="true"></i>
       </button>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmBox" id="delete">
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmBox" id="delete" value="${ id }">
         <i class="fas fa-trash-alt" aria-hidden="true" ></i>
       </button>
       </li>`;
@@ -38,10 +46,8 @@ $(document).ready(function() {
     $("#todo").val('');
   }
 
-  $(document).on("click","#edit",function(event) {
-  debugger
-    let id = event.target.todoObj;
-    console.log(id)
+  $(document).on("click","#editTodo",function(event) {
+    let id = event.target.value;
     const edit = prompt("Edit Your Text !!");
     if(edit) {
       $.map(todoArray,function(todo) {
@@ -69,24 +75,35 @@ $(document).ready(function() {
     Array.from(stores_li).sort((a, b) => b.id - a.id ).forEach(el => el.parentNode.appendChild(el));
   })
 
-  $('#delete').click(function (id) {
+  $(document).on("click","#delete",function(event) {
     let confirm = new bootstrap.Modal($('#confirmBox'), {});
-    idValue = id;
+    idValue = event.target.value;
     confirm.show();
   })
 
   $('#deleteElement').click(function() {
-    deleteData = todoArray.filter((e) => (e.id !== +idValue));
+    let deleteValue = todoArray.filter((e) => (e.id !== +idValue));
     $(`#${idValue}`).remove();
     $('.modal-backdrop').remove();
-    localStorage.setItem("todos", JSON.stringify(deleteData));
+    localStorage.setItem("todos", JSON.stringify(deleteValue));
   })
 
+  $("#sample").click(function() {
+    id = Date.now();
+    name = "Sample Todo";
+    const today = new Date();
+    date = `${today.getDate()} - ${(today.toLocaleString('default', { month: 'short' }) )} - ${today.getFullYear()}`;
+    let data = `<li id="${ id }" class = "todo-list">
+      <span class="span1">${name}</span>${date}
 
-});
-// $(document).on('keypress',function(e) {
-//   if(e.which == 13) {
+      <button class="btn btn-info" id="editTodo" value="${ id }" aria-label="Edit">
+        <i class="fas fa-edit" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmBox" id="delete" value="${ id }">
+        <i class="fas fa-trash-alt" aria-hidden="true" ></i>
+      </button>
+      </li>`;
+    $("#task-data").after(data);
 
-//   }
-// });
-
+  })
+})
